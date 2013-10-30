@@ -11,4 +11,4 @@ syntax: regexp
 
 syntax: glob
 examples/doc/*
-izumi.egg-info/*
+pywad.egg-info/*
