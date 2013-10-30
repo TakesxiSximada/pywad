@@ -1,7 +1,8 @@
 #! /usr/bin/env python
 #-*- coding: utf-8 -*-
-
-from pywad import Runner, Part, url_match
+from pywad.runner import Runner
+from pywad.part import Part
+from pywad.decorator import url_match
 
 class GoogleTop(Part):
     def _is_search_button(self, text):
