@@ -30,7 +30,12 @@ For example,
     from pywad import Part
     from pywad.decorator import url_match
     
+
     class GoogleTop(Part):
+        def _is_search_button(self, text):
+            for word in self.search_words:
+                if word in text:
+                    return True
 
         @url_match('www\.google\.')
         def is_target(self, browser, status):
@@ -42,10 +47,6 @@ For example,
                 if entry.get_attribute('type') == 'text':
                     entry.send_keys('test\n\n')
 
-        def _is_search_button(self, text):
-            for word in self.search_words:
-                if word in text:
-                    return True
 
 Next, let running it using Runner object. The Runner object is list-like object.
 It expects that the Part object enters. Run the parts objects if execute Runner.run().
