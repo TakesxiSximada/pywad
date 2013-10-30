@@ -1,0 +1,14 @@
+syntax: regexp
+.*~$
+.*\#$
+.*\.db$
+.*\.log$
+.*\.pyc$
+.*\.orig$
+.*\.bmp$
+^@.*
+^\..*
+
+syntax: glob
+examples/doc/*
+izumi.egg-info/*
