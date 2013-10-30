@@ -21,9 +21,9 @@ setup(
     version='0.0.1',
     url='https://bitbucket.org/takesxi_sximada/pywad',
     download_url='https://bitbucket.org/takesxi_sximada/pywad',
-    license='BSD'
-    author='TakesxiSximada'
-    author_email='takesxi.sximada@gmail.com'
+    license='BSD',
+    author='TakesxiSximada',
+    author_email='takesxi.sximada@gmail.com',
     description='The Python Web Auto Drive framework using selenium.webdriver.',
     long_description=long_desc,
     zip_safe=False,
