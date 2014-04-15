@@ -13,8 +13,8 @@ try:
         long_desc = fp.read()
 except:
     long_desc = ''
-    
-requires = ['selenium']
+
+requires = ['selenium>=2.35']
 
 setup(
     name='pywad',
