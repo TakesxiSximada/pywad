@@ -18,7 +18,7 @@ requires = ['selenium>=2.35']
 
 setup(
     name='pywad',
-    version='0.1.1',
+    version='0.1.2',
     url='https://bitbucket.org/takesxi_sximada/pywad',
     download_url='https://bitbucket.org/takesxi_sximada/pywad',
     license='BSD',
