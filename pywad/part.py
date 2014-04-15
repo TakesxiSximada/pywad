@@ -22,8 +22,10 @@ class Part(object):
             self.setup(browser, status)
             self.run(browser, status)
             self.teardown(browser, status)
+            return True
         else:
             print 'PASS'
+            return False
 
     def is_target(self, browser, status):
         """Check whether or not to perform.

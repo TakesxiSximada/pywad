@@ -48,8 +48,11 @@ class Runner(list):
         except TypeError:
             return self._status_or_factory
 
-    def run(self, url=None):
+    def run(self, url=None, turn=0):
         """Run elements.
+
+        url: initial url
+        turn: loop count. The infinite loop if turn is 0.
         """
         browser = self.get_browser()
         status = self.get_status()
@@ -57,11 +60,23 @@ class Runner(list):
             jump = Jump(url)
             jump.start(browser, status)
         try:
+
+            count = 0
+            current = None
             while self.interval():
                 for part in self:
-                    part.start(browser, status)
-                    self.sleep()
+                    is_run = part.start(browser, status)
+                    if is_run:
+                        current = part
+                        count = 0
+                        self.sleep()
+                    elif current == part:
+                        count += 1
+                        current = part
+                if turn > 0 and  count >= turn:
+                    break
         except BrowserClose:
             browser.close()
         except BrowserNoClose:
             pass
+        return browser, status
