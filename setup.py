@@ -2,7 +2,6 @@
 # -*- coding: utf-8 -*-
 
 import os
-import sys
 from setuptools import setup, find_packages
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
@@ -18,9 +17,9 @@ requires = ['selenium>=2.35']
 
 setup(
     name='pywad',
-    version='0.1.2',
-    url='https://bitbucket.org/takesxi_sximada/pywad',
-    download_url='https://bitbucket.org/takesxi_sximada/pywad',
+    version='0.1.3',
+    url='https://github.com/TakesxiSximada/pywad',
+    download_url='https://github.com/TakesxiSximada/pywad/archive/master.zip',
     license='BSD',
     author='TakesxiSximada',
     author_email='takesxi.sximada@gmail.com',
@@ -35,8 +34,6 @@ setup(
         'Intended Audience :: System Administrators',
         'License :: OSI Approved :: BSD License',
         'Natural Language :: English',
-        'Natural Language :: Esperanto',
-        'Natural Language :: Japanese',
         'Operating System :: MacOS :: MacOS X',
         'Operating System :: Microsoft :: Windows',
         'Operating System :: POSIX',
