@@ -1,6 +1,7 @@
-#-*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 """The browser controller.
 """
+from __future__ import division, print_function
 from .decorator import browser_control
 
 
@@ -16,15 +17,15 @@ class Part(object):
     def start(self, browser, status):
         """Start controlling browser.
         """
-        print self.__class__.__name__, '--->',
+        print(self.__class__.__name__, '--->', end='')
         if self.is_target(browser, status):
-            print 'GO'
+            print('GO')
             self.setup(browser, status)
             self.run(browser, status)
             self.teardown(browser, status)
             return True
         else:
-            print 'PASS'
+            print('PASS')
             return False
 
     def is_target(self, browser, status):

@@ -1,4 +1,4 @@
-#-*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 """The part runner.
 """
 from .error import BrowserClose, BrowserNoClose
@@ -73,7 +73,7 @@ class Runner(list):
                     elif current == part:
                         count += 1
                         current = part
-                if turn > 0 and  count >= turn:
+                if turn > 0 and count >= turn:
                     break
         except BrowserClose:
             browser.close()
