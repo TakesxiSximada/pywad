@@ -1,4 +1,3 @@
-#-*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 """The Python Web Auto Drive framework.
 """
-
