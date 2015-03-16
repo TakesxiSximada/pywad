@@ -13,11 +13,11 @@ try:
 except:
     long_desc = ''
 
-requires = ['selenium>=2.35']
+requires = ['selenium>=2.44']
 
 setup(
     name='pywad',
-    version='0.1.3',
+    version='0.1.4',
     url='https://github.com/TakesxiSximada/pywad',
     download_url='https://github.com/TakesxiSximada/pywad/archive/master.zip',
     license='BSD',
